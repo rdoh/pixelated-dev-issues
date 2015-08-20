@@ -1,4 +1,4 @@
-A log of the issues we (6 developers over 2 days) experience running the [pixelated-user-agent](https://github.com/pixelated/pixelated-user-agent) following the [README](https://github.com/pixelated/pixelated-user-agent/blob/master/README.md) instructions.
+A log of the difficulties we (6 developers over 2 days) experience running the [pixelated-user-agent](https://github.com/pixelated/pixelated-user-agent) following the [README](https://github.com/pixelated/pixelated-user-agent/blob/master/README.md) instructions.
 
 1. `/vagrant/service/development_requirements.txt` can't be parsed by the version of pip on the VM. `pip install --upgrade pip` fixes this. Not sure how to update puppet/vagrant conf to fix properly.
 
