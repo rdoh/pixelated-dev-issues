@@ -1,5 +1,7 @@
 1. `/vagrant/service/development_requirements.txt` can't be parsed by the version of pip on the VM. `pip install --upgrade pip` fixes this. Not sure how to update puppet/vagrant conf to fix properly.
 
+1. `dev.pixelated-project.org` stopped accepting sign-ups after 3 of us signed up (now giving 422 Method Not Allowed). Tried a different IP.
+
 1. I get disconnected from `vagrant ssh` every so often and the user-agent dies.
 
 1. Now user-agent won’t run. Error:
@@ -82,3 +84,4 @@ Type your password:
 2015-08-20 01:37:05 [twisted] INFO Stopping factory <leap.common.http._HTTP11ClientFactory instance at 0x3b17248>
 2015-08-20 01:37:05 [twisted] INFO Main loop terminated.
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$
+```
