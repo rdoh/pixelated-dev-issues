@@ -1,5 +1,13 @@
 A log of the difficulties we (6 developers over 2 days) experience running the [pixelated-user-agent](https://github.com/pixelated/pixelated-user-agent) following the [README](https://github.com/pixelated/pixelated-user-agent/blob/master/README.md) instructions.
 
+## Versions
+
+* OSX 10.10.4
+* Vagrant 1.7.4
+* VirtualBox 4.3.26 r98988
+
+## Log
+
 1. `/vagrant/service/development_requirements.txt` can't be parsed by the version of pip on the VM. Fixed in [pull request #436](https://github.com/pixelated/pixelated-user-agent/pull/436).
 
 1. `dev.pixelated-project.org` stopped accepting sign-ups at around 10:00-10:30 (UTC+10) after 3 of us signed up (then giving `405 Method Not Allowed`). Tried a different IP with no luck. Mysteriously started working again around 12:25.
