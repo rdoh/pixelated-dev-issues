@@ -2,7 +2,7 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 1. `/vagrant/service/development_requirements.txt` can't be parsed by the version of pip on the VM. `pip install --upgrade pip` fixes this. Not sure how to update puppet/vagrant conf to fix properly.
 
-1. `dev.pixelated-project.org` stopped accepting sign-ups after 3 of us signed up (now giving `405 Method Not Allowed`). Tried a different IP with no luck.
+1. `dev.pixelated-project.org` stopped accepting sign-ups at around 10:00-10:30 (UTC+10) after 3 of us signed up (then giving `405 Method Not Allowed`). Tried a different IP with no luck. Mysteriously started working again around 12:25.
 
 1. I get disconnected from `vagrant ssh` every so often and the user-agent dies.
 
