@@ -6,7 +6,7 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 1. I get disconnected from `vagrant ssh` every so often and the user-agent dies.
 
-1. Now user-agent won’t run (after vagrant disconnected) -- error below. @elimydlarz also saw this after Ctrl-C'ing the agent. 
+1. Then user-agent wouldn’t start (after vagrant disconnected) -- error below. @elimydlarz and I have seen this 3-4 times today and only been able to fix by `vagrant destroy`ing and re-`up`ping.
   * In Eli's case, this also broke the tests (`pep8` not existing) but not in mine.
 ```
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --host 0.0.0.0 -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt
@@ -88,3 +88,9 @@ Type your password:
 2015-08-20 01:37:05 [twisted] INFO Main loop terminated.
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$
 ```
+
+1. I then got into a state where, even after `vagrant destroy`, `vagrant up` always got stuck at the following line. This only happened to me. (vagrant 1.7.4, virtualbox 4.3.26 r98998, OSX 10.10.4)... strangely, there were 2 'source' VMs in VirtualBox. One was locked. I deleted the other. Didn't help.
+```
+==> source: Clearing any previously set forwarded ports...
+```
+
