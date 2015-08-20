@@ -16,7 +16,7 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 1. Then user-agent wouldn’t start (after vagrant disconnected) -- error below. @elimydlarz and I have seen this 3-4 times today and only been able to fix by `vagrant destroy`ing and re-`up`ping.
   * In Eli's case, this also broke the tests (`pep8` not existing) but not in mine.
-  * Seems the key data for the account specified has been borked somehow. @fbernitt suggested trying with another pixelated-platform account, which worked for me.
+  * Seems the key data for the account specified has been borked somehow. @fbernitt suggested trying with another pixelated-platform account, which worked for me. Not sure how/why this would happen.
 ```
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --host 0.0.0.0 -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt
 2015-08-20 01:36:21 [twisted] INFO Site starting on 3333
