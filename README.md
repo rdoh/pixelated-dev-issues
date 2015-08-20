@@ -89,7 +89,7 @@ Type your password:
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$
 ```
 
-1. I then got into a state where, even after `vagrant destroy`, `vagrant up` always got stuck at the following line. This only happened to me. There were no vagrant processes running but rebooting OSX fixed this problem.
+5. I then got into a state where, even after `vagrant destroy`, `vagrant up` always got stuck at the following line. This only happened to me. There were no vagrant processes running but rebooting OSX fixed this problem.
 ```
 ==> source: Clearing any previously set forwarded ports...
 ```
