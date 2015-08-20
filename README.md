@@ -6,7 +6,8 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 1. I get disconnected from `vagrant ssh` every so often and the user-agent dies.
 
-1. Now user-agent won’t run. Error:
+1. Now user-agent won’t run (after vagrant disconnected) -- error below. @elimydlarz also saw this after Ctrl-C'ing the agent. 
+  * In Eli's case, this also broke the tests (`pep8` not existing) but not in mine.
 ```
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --host 0.0.0.0 -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt
 2015-08-20 01:36:21 [twisted] INFO Site starting on 3333
