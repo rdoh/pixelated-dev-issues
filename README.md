@@ -89,7 +89,7 @@ Type your password:
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$
 ```
 
-1. I then got into a state where, even after `vagrant destroy`, `vagrant up` always got stuck at the following line. This only happened to me. (vagrant 1.7.4, virtualbox 4.3.26 r98998, OSX 10.10.4)... strangely, there were 2 'source' VMs in VirtualBox. One was locked. I deleted the other. Didn't help.
+1. I then got into a state where, even after `vagrant destroy`, `vagrant up` always got stuck at the following line. This only happened to me. There were no vagrant processes running but rebooting OSX fixed this problem.
 ```
 ==> source: Clearing any previously set forwarded ports...
 ```
