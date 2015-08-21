@@ -8,7 +8,15 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 ## 22nd August 2015
 
-1. Nothing yet :)
+6. For every email address I enter when composing, I see the following error and the padlock on the address on the UI is orange.
+```
+2015-08-21 01:51:06 [leap.keymanager] WARNING HTTP error retrieving key: HTTPError('403 Client Error: ...',)
+2015-08-21 01:51:06 [leap.keymanager] WARNING Could net fetch keyinfo.
+```
+
+6. Val: The Pixelated UI gets stuck at 'Loading...'. No obvious errors in the log and no failed network requests. Restarting the user-agent doesn't help. Firefox/Ubuntu.
+
+7. https://github.com/rdoh/pixelated-user-agent/blob/master/doc/first-steps.md references another vagrant VM but where is it?
 
 ## 21st August 2015
 
