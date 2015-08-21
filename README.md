@@ -8,7 +8,7 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 ## 22nd August 2015
 
-1. For every email address I enter when composing, I see the following error and the padlock on the address on the UI is orange.
+1. For every email address I enter when composing, I see the following error and the padlock next to the address on the UI is orange.
 ```
 2015-08-21 01:51:06 [leap.keymanager] WARNING HTTP error retrieving key: HTTPError('403 Client Error: ...',)
 2015-08-21 01:51:06 [leap.keymanager] WARNING Could net fetch keyinfo.
