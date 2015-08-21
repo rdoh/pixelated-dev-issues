@@ -18,7 +18,7 @@ A log of the difficulties we (6 developers over 2 days) experience running the [
 
 3. https://github.com/rdoh/pixelated-user-agent/blob/master/doc/first-steps.md references a 'hack day' vagrant VM. Does this exist?
 
-4. Is there a pixelated-platform somewhere that allows receiving of mail? Does it not work on dev.p-p and try.p-p only because of the lack of MX records)?
+4. Is there a public pixelated-platform somewhere (or one that could be used for a hack day) that allows receiving of mail? Does it not work on dev.p-p and try.p-p only because of the lack of MX records)?
 
 5. Is it possible to run a pixelated-platform on an EC2 instance or another VM?
 
