@@ -72,6 +72,7 @@ Connection to 127.0.0.1 closed.
 8- https://github.com/rdoh/pixelated-user-agent/blob/master/doc/first-steps.md references a 'hack day' vagrant VM. Does this exist?
 
 9- Is there a public pixelated-platform somewhere (or one that could be used for a hack day) that allows receiving of mail? Does it not work on dev.p-p and try.p-p only because of the lack of MX records)?
+  * seems to work now (5th September 2015)
 
 10- Is it possible to run a pixelated-platform on an EC2 instance or another VM?
 
