@@ -8,9 +8,10 @@ A log of the difficulties we experience running the [pixelated-user-agent](https
 
 ## 5th September 2015
 
-11- Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app would not load. Gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this  at the last hack day.
+11- Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this at the last hack day.
 
-12- `soledad.DuplicatedDocumentError`:
+12- `soledad.DuplicatedDocumentError`. This happens every time now when I start with my `robin2` dev.p-p account. It occurred after I accidentally specified `dev.p-p.org` as the `--host` to bind to. Don't know if that is relevant or not.
+
 ```
 user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --config /vagrant/pixelated.example -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt --host 0.0.0.0
 2015-09-05 05:42:49 [twisted] INFO PixelatedSite starting on 3333
