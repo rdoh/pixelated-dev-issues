@@ -1,10 +1,14 @@
-A log of the difficulties we (6 developers over 2 days) experience running the [pixelated-user-agent](https://github.com/pixelated/pixelated-user-agent) following the [README](https://github.com/pixelated/pixelated-user-agent/blob/master/README.md) instructions.
+A log of the difficulties we experience running the [pixelated-user-agent](https://github.com/pixelated/pixelated-user-agent).
 
 ## Versions
 
 * OSX 10.10.4
 * Vagrant 1.7.4
 * VirtualBox 4.3.26 r98988
+
+## 5th September 2015
+
+1. Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app would not load. Gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this  at the last hack day.
 
 ## 22nd August 2015
 
@@ -120,4 +124,3 @@ Type your password:
 ```
 ==> source: Clearing any previously set forwarded ports...
 ```
-
