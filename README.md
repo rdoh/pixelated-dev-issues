@@ -10,6 +10,49 @@ A log of the difficulties we experience running the [pixelated-user-agent](https
 
 1. Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app would not load. Gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this  at the last hack day.
 
+1. 
+```
+user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --config /vagrant/pixelated.example -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt --host 0.0.0.0
+2015-09-05 05:42:49 [twisted] INFO PixelatedSite starting on 3333
+2015-09-05 05:42:49 [twisted] INFO Starting factory <pixelated.config.site.PixelatedSite instance at 0x3727680>
+2015-09-05 05:42:49 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): dev.pixelated-project.org
+2015-09-05 05:42:56 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): dev.pixelated-project.org
+2015-09-05 05:42:57 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): dev.pixelated-project.org
+2015-09-05 05:42:59 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): api.dev.pixelated-project.org
+2015-09-05 05:43:01 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): api.dev.pixelated-project.org
+2015-09-05 05:43:03 [leap.soledad.client.secrets] INFO Checking if there's a secret in local storage...
+2015-09-05 05:43:03 [leap.soledad.client.secrets] INFO Found a secret in local storage.
+2015-09-05 05:43:03 [twisted] INFO Mail post-sync hook: processing queued docs
+2015-09-05 05:43:03 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): api.dev.pixelated-project.org
+2015-09-05 05:43:05 [twisted] INFO Starting factory <leap.common.http._HTTP11ClientFactory instance at 0x3736ea8>
+2015-09-05 05:43:07 [requests.packages.urllib3.connectionpool] INFO Starting new HTTPS connection (1): api.dev.pixelated-project.org
+2015-09-05 05:43:09 [twisted] ERROR Traceback (most recent call last):
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 393, in callback
+2015-09-05 05:43:09 [twisted] ERROR     self._startRunCallbacks(result)
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 501, in _startRunCallbacks
+2015-09-05 05:43:09 [twisted] ERROR     self._runCallbacks()
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+2015-09-05 05:43:09 [twisted] ERROR     current.result = callback(current.result, *args, **kw)
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 1184, in gotResult
+2015-09-05 05:43:09 [twisted] ERROR     _inlineCallbacks(r, g, deferred)
+2015-09-05 05:43:09 [twisted] ERROR --- <exception caught here> ---
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 1126, in _inlineCallbacks
+2015-09-05 05:43:09 [twisted] ERROR     result = result.throwExceptionIntoGenerator(g)
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/python/failure.py", line 389, in throwExceptionIntoGenerator
+2015-09-05 05:43:09 [twisted] ERROR     return g.throw(self.type, self.value, self.tb)
+2015-09-05 05:43:09 [twisted] ERROR   File "/vagrant/service/pixelated/bitmask_libraries/session.py", line 167, in _create_incoming_mail_fetcher
+2015-09-05 05:43:09 [twisted] ERROR     inbox = yield account.callWhenReady(lambda _: account.getMailbox('INBOX'))
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+2015-09-05 05:43:09 [twisted] ERROR     current.result = callback(current.result, *args, **kw)
+2015-09-05 05:43:09 [twisted] ERROR   File "/home/vagrant/user-agent-venv/src/leap.mail/src/leap/mail/adaptors/soledad.py", line 269, in get_first_doc_if_any
+2015-09-05 05:43:09 [twisted] ERROR     raise DuplicatedDocumentError
+2015-09-05 05:43:09 [twisted] ERROR leap.mail.adaptors.soledad.DuplicatedDocumentError:
+2015-09-05 05:43:09 [twisted] INFO Stopping factory <leap.common.http._HTTP11ClientFactory instance at 0x3736ea8>
+2015-09-05 05:43:09 [twisted] INFO (TCP Port 3333 Closed)
+2015-09-05 05:43:09 [twisted] INFO Stopping factory <pixelated.config.site.PixelatedSite instance at 0x3727680>
+2015-09-05 05:43:09 [twisted] INFO Main loop terminated.
+```
+
 ## 22nd August 2015
 
 1. For every email address I enter when composing, I see the following error and the padlock next to the address on the UI is orange.
