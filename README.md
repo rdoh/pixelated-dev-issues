@@ -8,9 +8,9 @@ A log of the difficulties we experience running the [pixelated-user-agent](https
 
 ## 5th September 2015
 
-1. Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app would not load. Gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this  at the last hack day.
+1- Seen on luigi's Mac: After Ctrl-C'ing the user agent and restarting, the web app would not load. Gets stuck on the loading screen with the flashing pixelated box and never progresses. Fixed by `vagrant halt`ing and `vagrant up`ping. We also saw this  at the last hack day.
 
-1. `soledad.DuplicatedDocumentError`:
+2- `soledad.DuplicatedDocumentError`:
 ```
 user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --config /vagrant/pixelated.example -lc /vagrant/service/pixelated/certificates/dev.pixelated-project.org.ca.crt --host 0.0.0.0
 2015-09-05 05:42:49 [twisted] INFO PixelatedSite starting on 3333
@@ -53,7 +53,7 @@ user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --config /vag
 2015-09-05 05:43:09 [twisted] INFO Main loop terminated.
 ```
 
-3. I still get disconnected from `vagrant ssh` every so often (also seen 21st August).
+3- I still get disconnected from `vagrant ssh` every so often (also seen 21st August).
 ```
 (user-agent-venv)vagrant@leap-wheezy:/vagrant$ Connection to 127.0.0.1 closed by remote host.
 Connection to 127.0.0.1 closed.
