@@ -53,6 +53,12 @@ user-agent-venv)vagrant@leap-wheezy:/vagrant$ pixelated-user-agent --config /vag
 2015-09-05 05:43:09 [twisted] INFO Main loop terminated.
 ```
 
+1. I still get disconnected from `vagrant ssh` every so often (also seen 21st August).
+```
+(user-agent-venv)vagrant@leap-wheezy:/vagrant$ Connection to 127.0.0.1 closed by remote host.
+Connection to 127.0.0.1 closed.
+```
+
 ## 22nd August 2015
 
 1. For every email address I enter when composing, I see the following error and the padlock next to the address on the UI is orange.
